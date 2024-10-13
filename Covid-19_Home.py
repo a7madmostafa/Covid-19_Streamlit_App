@@ -18,7 +18,7 @@ with st.container():
         # Image
         st.image('https://www.emro.who.int/images/stories/about-who/who_emro_logo_twitter.png', width=300)
 # Image
-st.image('E:\Python and ML Zero Grad\Streamlit porjects\Covid-19_Streamlit_App\World_Health_Organisation_headquarters.jpg')
+st.image('https://github.com/MohamedSalah-GitHub/Covid-19_Streamlit_App/blob/main/World_Health_Organisation_headquarters.jpg')
 
 # Description
 st.header('Description')
