@@ -1,15 +1,10 @@
 import streamlit as st
 import pandas as pd
 
-# Load Data
-@st.cache_data  # the new updated streamlit data caching decorator.
-def load_data():
-    # df = pd.read_csv('https://covid19.who.int/WHO-COVID-19-global-data.csv')
-    df = pd.read_csv('https://github.com/MohamedSalah-GitHub/Covid-19_Streamlit_App/blob/main/WHO-COVID-19-global-data.csv')
-    df['Date_reported'] = pd.to_datetime(df['Date_reported'])
-    return df
+import helper
 
-df = load_data()
+# Load Data
+df = helper.load_data()
 
 # About Data
 st.title('About Data')
