@@ -1,12 +1,15 @@
 import pandas as pd
 import plotly.express as px
 import streamlit as st
+import os
 
+cd = os.cwd()
+csv_path = os.path(cd +"/WHO-COVID-19-global-data.csv")
 # Load Data
 @st.cache_data  # the new updated streamlit data caching decorator.
 def load_data():
     # df = pd.read_csv('https://covid19.who.int/WHO-COVID-19-global-data.csv')
-    df = pd.read_csv('./WHO-COVID-19-global-data.csv')
+    df = pd.read_csv(csv_path)
     df['Date_reported'] = pd.to_datetime(df['Date_reported'])
     return df
 
